@@ -1,12 +1,10 @@
-# micropython-DS3231-AT24C32
-MicroPython driver for DS3231 RTC and AT24C32 EEPROM module.
-
-EEPROM Driver coming soon!
+# micropython-DS3231
+MicroPython driver for the DS3231 RTC module.
 
 ## DS3231N
 Driver for the Dallas DS3231, a highly accurate RTC IC.
 
-I wrote this driver to make an easier to use and complete driver to access all the functions the DS3231 has. The driver has been designed for use with an ESP8266 but should work on fine on other devices as long as an I2C instance can be given.
+I wrote this driver to make an easier to use and complete driver to access all the functions the DS3231 has. The driver has been designed for use with an ESP8266 and RP2040 but should work on fine on other devices as long as an I2C instance can be given.
 
 Some care has been put into memory use, with most variables buffered when constructing. Checking the alarms and setting the SQW/INT doesn't use memory allocation in the heap and can be used in ISR. This does not imply methods are thread safe.
 
